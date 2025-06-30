@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    cursor: none;
+}
+
+ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: none;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    position: relative;
+    display: inline-block;
+    margin:  10px 0;
+    font-size: 4em;
+    text-decoration: none;
+    color: #fff;
+    transition: font-size 0.3s ease;
+}
+
+/* Make the font size and layout responsive */
+@media (max-width: 1200px) {
+    ul li a {
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 992px) {
+    ul li a {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 768px) {
+    ul li a {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 576px) {
+    ul li a {
+        font-size: 2em;
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    ul li a {
+        font-size: 1.8em;
+    }
+}
+
+.cursor{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+/* Make cursor responsive on smaller screens */
+@media (max-width: 768px) {
+    .cursor {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cursor {
+        width: 20px;
+        height: 20px;
+    }
+}
